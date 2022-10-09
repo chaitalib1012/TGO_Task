@@ -73,7 +73,7 @@ class _HomePageState extends State<HomePage> {
                           children: [
                             Container(
                               margin: EdgeInsets.all(10),
-                              height: 43,
+                              height: 50,
                               width: 60,
                               child: Image(
                                 image: NetworkImage(post.cover_image),
