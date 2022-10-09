@@ -17,11 +17,8 @@ class _HomePageState extends State<HomePage> {
   _getPosts({bool refresh = true}) async {
     var provider = Provider.of<HomePageProvider>(context, listen: false);
     var postsResponse = await APIHelper.getPosts(
-      // limit: 10,
       page: provider.currentPage,
     );
-    debugPrint('PostResponse ==>' + provider.currentPage.toString());
-
     if (postsResponse.isSuccessful) {
       if (postsResponse.data.isNotEmpty) {
         if (refresh) {
